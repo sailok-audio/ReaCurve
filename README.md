@@ -33,17 +33,6 @@ Generates automation shapes based on geometric polygon patterns.
 
 ---
 
-### MORPH — Envelope Snapshot Morpher
-Morphs smoothly between two captured envelope snapshots.
-
-- **Capture modes** — Automation items or point selections, across multiple tracks
-- **Morph slider** — Drag with Ctrl (fine) or Shift (slower) precision
-- **Point reduction** — `shapeFit` algorithm: greedy forward scan + backward merge, keeps visual fidelity within a configurable error threshold
-- **Precision presets** — 5 tiers from 0.10% to 3.00% max error
-- **Preview** — Dual mini-graphs of the two captured sources
-
----
-
 ### SCULPT — Envelope Manipulation Tool
 Applies non-destructive transformations to existing envelopes.
 
@@ -55,6 +44,19 @@ Applies non-destructive transformations to existing envelopes.
 - **Multi-context** — Operates across multiple automation items and tracks simultaneously
 
 ---
+
+### MORPH — Envelope Snapshot Morpher
+Morphs smoothly between two captured envelope snapshots.
+
+- **Capture modes** — Automation items or point selections, across multiple tracks
+- **Morph slider** — Drag with Ctrl (fine) or Shift (slower) precision
+- **Point reduction** — `shapeFit` algorithm: greedy forward scan + backward merge, keeps visual fidelity within a configurable error threshold
+- **Precision presets** — 5 tiers from 0.10% to 3.00% max error
+- **Preview** — Dual mini-graphs of the two captured sources
+
+---
+
+
 
 ## Architecture
 
