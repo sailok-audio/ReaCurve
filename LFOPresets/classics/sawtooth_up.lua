@@ -1,0 +1,21 @@
+return {
+  sides=2,
+  phase=0.000000,
+  warp=0.700000,
+  amp=1.000000,
+  offset=0.000000,
+  cycles=4,
+  cycle_mode='fixed',
+  curve_mode=0,
+  curve_amt=0.000000,
+  segment_shape=0,
+  bezier_tension=0.000000,
+  quantize=0,
+  align=0.000000,
+  path_slide=0.000000,
+  amp_range=1,
+  v_offsets={
+    [0]={-2.000000,0.000000},
+    [1]={0.000000,0.908138},
+  },
+}

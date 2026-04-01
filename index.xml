@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index version="1" name="ReaCurve">
+
+  <category name=".">
+
+    <reapack name="00_ReaCurve_Main.lua" type="script" desc="ReaCurve Suite - MORPH LFO RAND SCULPT">
+      <version name="1.0.0" author="sailok" time="2026-04-01T00:00:00Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+
+        <!-- Main hub -->
+        <source file="00_ReaCurve_Main.lua" main="main"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/00_ReaCurve_Main.lua</source>
+
+        <!-- Standalone tools -->
+        <source file="ReaCurve_LFO.lua" main="main"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/ReaCurve_LFO.lua</source>
+        <source file="ReaCurve_MORPH.lua" main="main"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/ReaCurve_MORPH.lua</source>
+        <source file="ReaCurve_RAND.lua" main="main"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/ReaCurve_RAND.lua</source>
+        <source file="ReaCurve_SCULPT.lua" main="main"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/ReaCurve_SCULPT.lua</source>
+
+        <!-- Common libraries (not in action list) -->
+        <source file="lib/CommonFunction/EnvConvert.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/CommonFunction/EnvConvert.lua</source>
+        <source file="lib/CommonFunction/EnvWriter.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/CommonFunction/EnvWriter.lua</source>
+        <source file="lib/CommonFunction/EnvelopeUtils.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/CommonFunction/EnvelopeUtils.lua</source>
+        <source file="lib/CommonFunction/Generator.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/CommonFunction/Generator.lua</source>
+        <source file="lib/CommonFunction/GridUtils.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/CommonFunction/GridUtils.lua</source>
+        <source file="lib/CommonFunction/Logger.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/CommonFunction/Logger.lua</source>
+        <source file="lib/CommonFunction/ReaperUtils.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/CommonFunction/ReaperUtils.lua</source>
+        <source file="lib/CommonFunction/ScaleConverter.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/CommonFunction/ScaleConverter.lua</source>
+
+        <!-- UI widgets -->
+        <source file="lib/CommonFunction/UI/Anim.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/CommonFunction/UI/Anim.lua</source>
+        <source file="lib/CommonFunction/UI/Slider.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/CommonFunction/UI/Slider.lua</source>
+        <source file="lib/CommonFunction/UI/StandaloneWindow.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/CommonFunction/UI/StandaloneWindow.lua</source>
+        <source file="lib/CommonFunction/UI/Theme.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/CommonFunction/UI/Theme.lua</source>
+        <source file="lib/CommonFunction/UI/TitleBar.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/CommonFunction/UI/TitleBar.lua</source>
+        <source file="lib/CommonFunction/UI/Toggle.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/CommonFunction/UI/Toggle.lua</source>
+        <source file="lib/CommonFunction/UI/Widgets.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/CommonFunction/UI/Widgets.lua</source>
+
+        <!-- LFO module -->
+        <source file="lib/LFO/LFOConfig.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/LFO/LFOConfig.lua</source>
+        <source file="lib/LFO/LFOGeometry.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/LFO/LFOGeometry.lua</source>
+        <source file="lib/LFO/LFOPresets.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/LFO/LFOPresets.lua</source>
+        <source file="lib/LFO/LFOState.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/LFO/LFOState.lua</source>
+        <source file="lib/LFO/LFOWrite.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/LFO/LFOWrite.lua</source>
+
+        <!-- MORPH module -->
+        <source file="lib/MORPH/MORPHCapture.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/MORPH/MORPHCapture.lua</source>
+        <source file="lib/MORPH/MORPHConfig.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/MORPH/MORPHConfig.lua</source>
+        <source file="lib/MORPH/MORPHEngine.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/MORPH/MORPHEngine.lua</source>
+        <source file="lib/MORPH/MORPHState.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/MORPH/MORPHState.lua</source>
+        <source file="lib/MORPH/MORPHWrite.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/MORPH/MORPHWrite.lua</source>
+
+        <!-- RAND module -->
+        <source file="lib/RAND/RANDConfig.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/RAND/RANDConfig.lua</source>
+        <source file="lib/RAND/RANDState.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/RAND/RANDState.lua</source>
+        <source file="lib/RAND/RANDWrite.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/RAND/RANDWrite.lua</source>
+
+        <!-- SCULPT module -->
+        <source file="lib/SCULPT/SCULPTConfig.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/SCULPT/SCULPTConfig.lua</source>
+        <source file="lib/SCULPT/SCULPTEngine.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/SCULPT/SCULPTEngine.lua</source>
+        <source file="lib/SCULPT/SCULPTState.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/SCULPT/SCULPTState.lua</source>
+        <source file="lib/SCULPT/SCULPTWrite.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/SCULPT/SCULPTWrite.lua</source>
+
+        <!-- UI panels -->
+        <source file="lib/UI/LFOPanel.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/UI/LFOPanel.lua</source>
+        <source file="lib/UI/MORPHPanel.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/UI/MORPHPanel.lua</source>
+        <source file="lib/UI/RANDPanel.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/UI/RANDPanel.lua</source>
+        <source file="lib/UI/SCULPTPanel.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/lib/UI/SCULPTPanel.lua</source>
+
+        <!-- LFO Presets -->
+        <source file="LFOPresets/init.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/LFOPresets/init.lua</source>
+        <source file="LFOPresets/glitch.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/LFOPresets/glitch.lua</source>
+        <source file="LFOPresets/classics/adsr.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/LFOPresets/classics/adsr.lua</source>
+        <source file="LFOPresets/classics/sawtooth_down.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/LFOPresets/classics/sawtooth_down.lua</source>
+        <source file="LFOPresets/classics/sawtooth_up.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/LFOPresets/classics/sawtooth_up.lua</source>
+        <source file="LFOPresets/classics/sh.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/LFOPresets/classics/sh.lua</source>
+        <source file="LFOPresets/classics/sine.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/LFOPresets/classics/sine.lua</source>
+        <source file="LFOPresets/classics/sinish.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/LFOPresets/classics/sinish.lua</source>
+        <source file="LFOPresets/classics/square.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/LFOPresets/classics/square.lua</source>
+        <source file="LFOPresets/classics/triangle.lua" main="false"
+          >https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/LFOPresets/classics/triangle.lua</source>
+
+      </version>
+    </reapack>
+
+  </category>
+
+</index>
