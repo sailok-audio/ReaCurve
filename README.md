@@ -1,6 +1,6 @@
 # ReaCurve
 
-A suite of REAPER scripts for generating and manipulating automation envelopes. Each tool can be launched standalone or together through the unified hub (`00_ReaCurve_Main.lua`).
+A suite of REAPER scripts for generating and manipulating envelope points and automation items. Each tool can be launched standalone or together through the unified hub (`00_ReaCurve_Main.lua`).
 Link to the github repository package for REAPER:
 
 https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/index.xml
