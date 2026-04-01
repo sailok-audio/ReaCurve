@@ -1,8 +1,23 @@
 # ReaCurve
 
 A suite of REAPER scripts for generating and manipulating automation envelopes. Each tool can be launched standalone or together through the unified hub (`00_ReaCurve_Main.lua`).
+Link to the github repository package for REAPER:
+
+https://raw.githubusercontent.com/sailok-audio/ReaCurve/main/index.xml
 
 ## Tools
+
+### RAND — Random Envelope Generator
+Procedurally generates random automation curves.
+
+- **Generation modes** — Free (point count) or grid-aligned (points per division)
+- **Shape pool** — 6 shapes + Random-per-point mode
+- **Seeded RNG** — Reproducible results, independent seeds for positions and shapes
+- **Amplitude control** — 4 range presets, scaling, offset, quantize levels (2–16 steps)
+- **Bezier tension** — Per-generation tension control
+- **Preview** — Real-time graph with grid overlay
+
+---
 
 ### LFO — Polygon LFO Generator
 Generates automation shapes based on geometric polygon patterns.
@@ -26,18 +41,6 @@ Morphs smoothly between two captured envelope snapshots.
 - **Point reduction** — `shapeFit` algorithm: greedy forward scan + backward merge, keeps visual fidelity within a configurable error threshold
 - **Precision presets** — 5 tiers from 0.10% to 3.00% max error
 - **Preview** — Dual mini-graphs of the two captured sources
-
----
-
-### RAND — Random Envelope Generator
-Procedurally generates random automation curves.
-
-- **Generation modes** — Free (point count) or grid-aligned (points per division)
-- **Shape pool** — 6 shapes + Random-per-point mode
-- **Seeded RNG** — Reproducible results, independent seeds for positions and shapes
-- **Amplitude control** — 4 range presets, scaling, offset, quantize levels (2–16 steps)
-- **Bezier tension** — Per-generation tension control
-- **Preview** — Real-time graph with grid overlay
 
 ---
 
