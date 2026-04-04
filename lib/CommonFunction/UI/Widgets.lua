@@ -206,7 +206,12 @@ end
 
 -- ── Morph bar (draggable vertical line in main graph) ────────
 
+-- Persistent anchor for Ctrl precision drag on the morph bar.
+-- Stores { mode, mx, val } while a Ctrl drag is active.
+local _bar_drag_start = nil
+
 -- Draws and manages the draggable morph position bar.
+-- Supports normal drag (direct position) and Ctrl drag (0.05x precision).
 -- Returns (new_morph, still_dragging).
 function M.drawMorphBar(ctx, dl, px, py, pw, ph, morph, dragging, slider_active)
   local mx          = px + morph * pw
@@ -219,10 +224,22 @@ function M.drawMorphBar(ctx, dl, px, py, pw, ph, morph, dragging, slider_active)
   end
   if dragging then
     if reaper.ImGui_IsMouseDown(ctx, 0) then
-      morph = math.max(0, math.min(1, (mouse_x - px) / pw))
-      mx    = px + morph * pw
+      local ctrl = reaper.ImGui_IsKeyDown(ctx, reaper.ImGui_Mod_Ctrl())
+      if ctrl then
+        -- Precision mode: anchor on first Ctrl frame, then scale movement by 0.05x
+        if not _bar_drag_start or _bar_drag_start.mode ~= "ctrl" then
+          _bar_drag_start = { mode = "ctrl", mx = mouse_x, val = morph }
+        end
+        local ds = _bar_drag_start
+        morph = math.max(0, math.min(1, ds.val + (mouse_x - ds.mx) / pw * 0.05))
+      else
+        _bar_drag_start = nil
+        morph = math.max(0, math.min(1, (mouse_x - px) / pw))
+      end
+      mx = px + morph * pw
     else
-      dragging = false
+      dragging        = false
+      _bar_drag_start = nil
     end
   end
 

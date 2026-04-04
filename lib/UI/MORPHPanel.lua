@@ -52,7 +52,10 @@ function M.drawSourceSlot(ctx, dl, slot_n)
   local avail_w = select(1, reaper.ImGui_GetContentRegionAvail(ctx))
   local bh      = 30
   local is1     = (slot_n == 1)
-  local stype   = is1 and State.slot1_type or State.slot2_type
+  -- Safe slot selection: avoid "a and b or c" when b can be nil.
+  -- With that idiom, a nil slot1_type would fall through to slot2_type even for slot 1.
+  local stype = is1 and State.slot1_type or nil
+  if not is1 then stype = State.slot2_type end
   local waiting = (State.capture_mode == slot_n)
 
   -- Determine widget state and badge text
@@ -82,17 +85,22 @@ end
 
 -- Draws the mini-graph for slot_n using frozen sample data.
 function M.drawSlotMiniGraph(dl, px, py, pw, ph, slot_n)
-  local is1  = (slot_n == 1)
-  local stype = is1 and State.slot1_type or State.slot2_type
+  local is1 = (slot_n == 1)
+  -- Safe slot selection: avoid "a and b or c" when b can be nil.
+  -- With that idiom, a nil slot1_type/sel1/ai1 would fall through to slot 2 data.
+  local stype = is1 and State.slot1_type or nil
+  if not is1 then stype = State.slot2_type end
   local vals  = {}
 
   if stype == "sel" then
-    local src = is1 and State.sel1 or State.sel2
+    local src = is1 and State.sel1 or nil
+    if not is1 then src = State.sel2 end
     if src then
       for i = 0, 79 do vals[#vals+1] = EnvUtils.evalSel(src, i/79) end
     end
   elseif stype == "ai" then
-    local obj = is1 and State.ai1 or State.ai2
+    local obj = is1 and State.ai1 or nil
+    if not is1 then obj = State.ai2 end
     if obj and obj.frozen_samples then
       vals = EnvUtils.sampleFrozenNorm(obj.frozen_samples, 80)
     end

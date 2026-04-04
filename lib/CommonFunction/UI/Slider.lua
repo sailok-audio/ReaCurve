@@ -198,8 +198,10 @@ function M.draw(ctx, id, label, value, v_min, v_max, fmt, w, disabled, is_int, d
       end
       _sld_editing[id] = nil ; _sld_edit_buf[id] = nil ; _sld_edit_frame[id] = nil
     end
-    -- Reposition cursor to the same place as the non-edit branch (no Dummy)
+    -- Reposition cursor below the widget; Dummy(0,0) registers the position
+    -- so BeginGroup/EndGroup can correctly track extended boundaries.
     reaper.ImGui_SetCursorScreenPos(ctx, sx_full, end_y)
+    reaper.ImGui_Dummy(ctx, 0, 0)
   else
     local vc = disabled and hxa(T.C_DISABLED, 0.55)
             or hxa(T.C_TXT_PRI, active and 1.0 or 0.82)
@@ -214,7 +216,9 @@ function M.draw(ctx, id, label, value, v_min, v_max, fmt, w, disabled, is_int, d
         and reaper.ImGui_IsMouseDoubleClicked(ctx, 0) then
       _sld_editing[id] = true ; _sld_edit_buf[id] = val_str ; _sld_edit_frame[id] = 0
     end
+    -- Dummy(0,0) registers the final cursor position so groups track boundaries correctly.
     reaper.ImGui_SetCursorScreenPos(ctx, sx_full, end_y)
+    reaper.ImGui_Dummy(ctx, 0, 0)
   end
 
   if opts.return_active then return new_val, active end
@@ -249,7 +253,9 @@ function M.drawPair(ctx, avw, gap, fn_a, fn_b)
   fn_b(half, col2_sx)
   local _, sy_b = reaper.ImGui_GetCursorScreenPos(ctx)
 
+  -- Dummy(0,0) registers the final position so any enclosing group tracks the full height.
   reaper.ImGui_SetCursorScreenPos(ctx, sx, math.max(sy_a, sy_b))
+  reaper.ImGui_Dummy(ctx, 0, 0)
 end
 
 return M
